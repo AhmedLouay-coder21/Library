@@ -12,5 +12,6 @@ function Book(title,author) {
 }
 function addBookToLibrary(title,author) {
   // take params, create a book then store it in the array
-
+  const book = new Book(title, author);
+  myLibrary.push(book);
 }
