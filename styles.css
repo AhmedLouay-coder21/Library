@@ -1,8 +1,8 @@
 body
 {
     display: flex;
-    background-color: white;
-    color: white;
+    flex-direction: column;
+    gap: 50px;
 }
 table, th, td {
   border:1px solid black;
@@ -10,4 +10,40 @@ table, th, td {
 table
 {
     width: 100%;
+}
+#newBook
+{
+    margin: auto;
+    width: 20%;
+    height: 50%;
+}
+#form
+{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+#formContent
+{
+    background-color: aqua;
+    display: flex;
+    border: 10px solid black;
+    margin: auto;
+    gap: 10px;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 50vh;
+    justify-content: center;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+}
+#formContent.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+label
+{
+    color: black;
 }

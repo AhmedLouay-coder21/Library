@@ -1,5 +1,21 @@
 const myLibrary = [];
 const Books = document.getElementById("Books");
+const newBookButton = document.getElementById("newBook");
+const form = document.getElementById("formContent");
+
+newBookButton.addEventListener("click", () => {
+  form.classList.add("visible");
+});
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+  formTitle = document.getElementById("title").value;
+  formAuthor = document.getElementById("author").value;
+  formPages = document.getElementById("Pages#").value;
+  formIsRead = document.getElementById("isRead").value;
+  const lastBookNumber = myLibrary.length;
+  addBookToLibrary(formTitle,formAuthor,formPages,formIsRead);
+  displayBookInfo(lastBookNumber);
+});
 function Book(title, author, numberOfPages, isRead) {
   // the constructor...
   if(!new.target)
@@ -20,7 +36,7 @@ function addBookToLibrary(title, author, numberOfPages, isRead) {
 
 addBookToLibrary("Oliver Twist","Charles Dickens","608", "Yes");
 addBookToLibrary("Test","Me","0", "No");
-console.log(myLibrary[0]);
+
 function displayBookInfo(i)
 {
     const newLine = document.createElement("tr");
