@@ -7,13 +7,18 @@ newBookButton.addEventListener("click", () => {
   form.classList.add("visible");
 });
 form.addEventListener("submit", function(event) {
+  //prevent from reloading the page on submit
   event.preventDefault();
+  // getting the data the user submitted from the form.
   formTitle = document.getElementById("title").value;
   formAuthor = document.getElementById("author").value;
   formPages = document.getElementById("Pages#").value;
   formIsRead = document.getElementById("isRead").value;
+  //getting the last index in the array to add the last book
   const lastBookNumber = myLibrary.length;
+  //add the book info to the books array
   addBookToLibrary(formTitle,formAuthor,formPages,formIsRead);
+  //display the new book info
   displayBookInfo(lastBookNumber);
 });
 function Book(title, author, numberOfPages, isRead) {
@@ -36,7 +41,7 @@ function addBookToLibrary(title, author, numberOfPages, isRead) {
 
 addBookToLibrary("Oliver Twist","Charles Dickens","608", "Yes");
 addBookToLibrary("Test","Me","0", "No");
-
+// display books info in a table
 function displayBookInfo(i)
 {
     const newLine = document.createElement("tr");
@@ -54,6 +59,7 @@ function displayBookInfo(i)
     newLine.appendChild(numberOfPages);
     newLine.appendChild(isRead);
 }
+//a loop that gets all the books from the array to display them
 for(let i = 0; i < myLibrary.length; i++)
 {
   displayBookInfo(i);
