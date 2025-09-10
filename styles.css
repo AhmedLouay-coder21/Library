@@ -2,18 +2,22 @@ body
 {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 50px;
+    background-image: url('https://cdn.edu.buncee.com/rackspace/bnc-assets/backgrounds/58b/e18/1488576911_BgLibrary030317_01.jpg');
 }
 
 table
 {
-    
-    width: 100%;
+    width: 60%;
+    border-collapse: collapse;
 }
 th, td
 {
-    border: 1px solid black;
     text-align: start;
+    border: 1px solid black;
+    padding: 8px;
 }
 #delete
 {
@@ -21,15 +25,16 @@ th, td
 }
 #newBook
 {
-    margin: auto;
+    margin: 20px;
     width: 20%;
-    height: 50%;
 }
 #form
 {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    align-items: center;
+    width: 50%;
+    gap: 60px;
 }
 #formContent
 {
