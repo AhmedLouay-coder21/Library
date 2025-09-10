@@ -5,6 +5,7 @@ const form = document.getElementById("formContent");
 
 newBookButton.addEventListener("click", () => {
   form.classList.add("visible");
+
 });
 form.addEventListener("submit", function(event) {
   //prevent from reloading the page on submit
@@ -41,9 +42,24 @@ function addBookToLibrary(title, author, numberOfPages, isRead) {
 
 addBookToLibrary("Oliver Twist","Charles Dickens","608", "Yes");
 addBookToLibrary("Test","Me","0", "No");
+const editIcon = document.createElement('img');
+editIcon.src = "data:image/png;base64,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";
+editIcon.alt = "edit icon";
+editIcon.style.alignContent = "end";
 // display books info in a table
 function displayBookInfo(i)
 {
+    const editIcon = document.createElement('img');
+    editIcon.src = "data:image/png;base64,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";
+    editIcon.alt = "edit icon";
+    editIcon.style.cursor = "pointer";
+    editIcon.style.height = "15px";
+    editIcon.addEventListener("click", () => {
+    myLibrary[i].isRead = prompt("Please enter the new status", "Yes/No/Intend To/in 1 week");
+      isRead.textContent = myLibrary[i].isRead;
+      newLine.appendChild(isRead);
+      isRead.appendChild(editIcon);
+    });
     const newLine = document.createElement("tr");
     Books.appendChild(newLine);
     const title = document.createElement("td");
@@ -58,7 +74,14 @@ function displayBookInfo(i)
     newLine.appendChild(author);
     newLine.appendChild(numberOfPages);
     newLine.appendChild(isRead);
+    isRead.appendChild(editIcon);
+    isRead.style.display = "flex";
+    isRead.style.justifyContent = "space-between";
+    isRead.style.alignItems = "center";
 }
+console.log(myLibrary);
+myLibrary.splice[0,2];
+console.log(myLibrary);
 //a loop that gets all the books from the array to display them
 for(let i = 0; i < myLibrary.length; i++)
 {

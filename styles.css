@@ -4,12 +4,16 @@ body
     flex-direction: column;
     gap: 50px;
 }
-table, th, td {
-  border:1px solid black;
-}
+
 table
 {
+    
     width: 100%;
+}
+th, td
+{
+    border: 1px solid black;
+    text-align: start;
 }
 #newBook
 {
