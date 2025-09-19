@@ -1,3 +1,10 @@
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
 body
 {
     display: flex;
@@ -27,6 +34,7 @@ th, td
 {
     margin: 20px;
     width: 20%;
+    min-width: 100px;
 }
 #form
 {
@@ -41,11 +49,11 @@ th, td
     background-color: aqua;
     display: flex;
     border: 10px solid black;
-    margin: auto;
     gap: 10px;
     align-items: center;
     flex-direction: column;
     width: 50%;
+    min-width: 250px;
     height: 50vh;
     justify-content: center;
     transition: opacity 1s ease-in-out;
@@ -59,4 +67,14 @@ th, td
 label
 {
     color: black;
+}
+#Books
+{
+    width: 100%;
+}
+td {
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    max-width: 150px;
 }

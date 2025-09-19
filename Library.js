@@ -38,6 +38,7 @@ class library
       deleteIcon.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAAAYFBMVEUAAAD////g4ODGxsaGhobx8fH4+PgtLS1JSUm2trYYGBgiIiLPz8/c3Nw9PT1DQ0N6eno1NTXW1taSkpK/v7+tra1zc3NYWFjn5+egoKCYmJgQEBCnp6dSUlJlZWWAgIDj3+fQAAADY0lEQVR4nO2ca5uyIBCGVzxiWmmeKtP//y/X2nYdfDPABmz3nedbXDDc4chJmI+P5Yrr/nAsy7K4yv1SwYuCl0evC18w/IJOeeDMi/GtdaLw+AToLre2y1QxOZPjBK1FpFihmb6U76xBuapMQ2NZ8qw4UWcaqOw4lkY7XeXbYDroMTlOcjbOVPu6UM7BOFSuzeQ4sWGmy7TCwP9X056+NAxViES82m0mOc5xWJ/EZ+yb7a0iobZktrKMW/QqT2B69lqVMGdqFAq6+fOHcha6M6NQ0IWPz7MKr0RnkCmETj718KngaHQyCFWDenJZZuh/3CBUBeqRzpXgPygMQvU6r/nFEhR8Ip4scxTYgdoDqL0sc4YL1fGENQ/GNGFQezToiZJlbljq9qpLMXF8MyyWKTFxuSVMNSptFenP4l5TrwDVy83gKlGAUl7TYalRgCrlZnClstyx7OdqUFY7hF8N9WaPr3OLouCNbaiAX3cC5+axntyAOc11DKtCsRko63051Nzsei8vak5zg81bQlXyogR1U7cmlPuOUHNLi1pe1D7ULk+SPGUpGwSy+wxXwPT151BhPlSssoUFRkDkHZMMrAHUVjI/AiUrXKgtMK257UhQBEVQBEVQC6DAMAP2ETdNcx/AGgYMtt+prHHH3aaY/2RugI3t8mFmBmpMDaIxGaxfGYACu/tg13YFqJSgCIqgCIqgCIqgCIqgCOpPQYFvvCtDgf02ZKgdONygeT7cDpTstBNBERRBERRBERRBEdSfgAIGCWotKM3pcGoFSvOWD0ERFEER1C+CAoeICIqgCIqgkKGiMVUXCtxYfUsocN8TG0qPiaAIyiQUuNGCAQUv3f4XUM5lTAbXt+BJs8d9HQ4UvJq9HQXiEoRjKvxYlo3JYNOgRodCEA4UcgSN7h2hcFoKOawATkshX5avUKDmrtks1B4FCjnUiIcC5eOGkEqWQ8EAKK7mfulTCUGZNMsKtyITvLZqoV1db82ESGqBW97UHgcd7vIk+s53LXO8FeeFeHVX+6S78JfMiGm7xdk8lDSKxwpNpRKSYKrNkphcGloWFm5rFmphTKrOZDSOxbO0+lkYytf0QpilnVbwQHU1KhFKZnU2EiZkPhaaKlarFCVTXb4byWuVKqwOLXdRVJSnXgHpE40+ZKC0OuQOAAAAAElFTkSuQmCC"
       deleteIcon.style.cursor = "pointer";
       deleteIcon.style.marginTop = "20px";
+      deleteIcon.style.margin = "auto";
       deleteIcon.style.height = "30px";
       deleteIcon.addEventListener("click", () => {
         if (confirm("Are you sure that you want to delete this book?")) 
@@ -62,7 +63,6 @@ class library
 
       const isRead = document.createElement("td");
       isRead.style.backgroundColor = "#4e9fe5";
-
       title.textContent = this.books[i].title;
       author.textContent = this.books[i].author;
       numberOfPages.textContent = this.books[i].numberOfPages;
